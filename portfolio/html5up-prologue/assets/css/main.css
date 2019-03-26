@@ -1755,14 +1755,14 @@ input, select, textarea {
 		}
 
 		.image.avatar48 {
-			width: 48px;
-			height: 48px;
+			width: 75px;
+			height: 75px;
 			background: #f00;
 		}
 
 			.image.avatar48 img {
-				width: 48px;
-				height: 48px;
+				width: 75px;
+				height: 75px;
 			}
 
 		.image.fit {
@@ -1937,6 +1937,30 @@ input, select, textarea {
 
 /* Button */
 
+	/* Header Button */
+	#header-button {
+    position: relative;
+    display: inline-block;
+    border: 2px solid white;
+    border-radius: 0.35em;
+    color: #fff !important;
+    text-decoration: none;
+    padding: 0.3em 1.5em;
+    cursor: pointer;
+		background-color: #0000 !important;
+    -moz-transition: background-color 0.35s ease-in-out;
+    -webkit-transition: background-color 0.35s ease-in-out;
+    -ms-transition: background-color 0.35s ease-in-out;
+    transition: background-color 0.35s linear !important;
+	}
+
+	#header-button:hover {
+		color: #ffffff7d !important;
+		border: 2px solid #0000 !important;
+    border-radius: 0.35em;
+		background-color: #00000055 !important;
+	}
+
 	input[type="button"],
 	input[type="submit"],
 	input[type="reset"],
@@ -2106,8 +2130,8 @@ input, select, textarea {
 
 		#logo .image {
 			position: absolute;
-			left: 0;
-			top: 0;
+			left: 0px;
+			top: -10px;
 		}
 
 	#nav ul {
@@ -2234,7 +2258,7 @@ input, select, textarea {
 
 			#main > section.one {
 				background-color: #81918E;
-				background-image: url("../../images/banner.jpg");
+				background-image: url("../../images/seattle-sunset-v2.jpg");
 			}
 
 			#main > section.two {
