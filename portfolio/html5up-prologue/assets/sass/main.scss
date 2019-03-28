@@ -1182,6 +1182,18 @@
 		justify-content: space-between;
 	}
 
+	@mixin card() {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		align-items: center;
+		width: 100%;
+		padding: 20px;
+		margin-bottom: 40px;
+		background-color: #FDFDFD;
+		@include box-shadow();
+	}
+
 	@mixin box-shadow(){
 		border-left: 5px solid $accent-red;
 		box-shadow: 5px 5px 13px -1px rgba(0,0,0,0.39);
@@ -1200,6 +1212,7 @@
 			width: 100%;
 			padding: 20px;
 			margin-bottom: 40px;
+			background-color: #FDFDFD;
 			@include box-shadow();
 
 			h2 {
@@ -1255,6 +1268,63 @@
 			strong {
 				font-size: 2rem;
 				font-weight: bolder;
+			}
+		}
+
+		.summary-button {
+			border: 1px solid $accent-red;
+			border-radius: 0.35em;
+			color: $accent-red;
+			text-decoration: none;
+			padding: 0.3em 1.5em;
+			cursor: pointer;
+			-moz-transition: background-color 0.35s linear !important;
+			-webkit-transition: background-color 0.35s linear !important;
+			-ms-transition: background-color 0.35s linear !important;
+			transition: background-color 0.35s linear !important;
+		}
+
+		.summary-button:hover {
+			color: white;
+			border: 1px solid $accent-red;
+			border-radius: 0.35em;
+			background-color: $accent-red;
+		}
+	}
+
+	.form-card {
+		@include card();
+		padding: 60px 0;
+
+		input {
+			font-size: 1rem;
+		}
+
+		textarea {
+			font-size: 1rem;
+		}
+
+		.col-12 {
+			input {
+				border: 1px solid $accent-red;
+				border-radius: 0.35em;
+				color: $accent-red !important;
+				text-decoration: none;
+				padding: 0.3em 1.5em;
+				cursor: pointer;
+				background-color: #FDFDFD !important;
+				background-image: none !important;
+				-moz-transition: background-color 0.35s linear !important;
+				-webkit-transition: background-color 0.35s linear !important;
+				-ms-transition: background-color 0.35s linear !important;
+				transition: background-color 0.35s linear !important;
+			}
+
+			input:hover {
+				color: white !important;
+				border: 1px solid $accent-red;
+				border-radius: 0.35em;
+				background-color: $accent-red !important;
 			}
 		}
 	}
