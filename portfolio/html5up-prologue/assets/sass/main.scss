@@ -311,13 +311,13 @@
 		}
 
 		&.avatar48 {
-			width: 48px;
-			height: 48px;
+			width: 100px;
+			height: 100px;
 			background: #f00;
 
 			img {
-				width: 48px;
-				height: 48px;
+				width: 100px;
+				height: 100px;
 			}
 		}
 
@@ -497,7 +497,7 @@
 	.header-button {
 		position: relative;
 		display: inline-block;
-		border: 2px solid white;
+		border: 1px solid #0000 !important;
 		border-radius: 0.35em;
 		color: #fff !important;
 		text-decoration: none;
@@ -511,8 +511,8 @@
 	}
 
 	.header-button:hover {
-		color: #ffffff7d !important;
-		border: 2px solid #0000 !important;
+		color: #E276897d !important;
+		border: 1px solid #0000 !important;
 		border-radius: 0.35em;
 		background-color: #00000055 !important;
 	}
@@ -653,8 +653,8 @@
 
 		.image {
 			position: absolute;
-			left: 0;
-			top: 0;
+			left: -20px;
+			top: -28px;
 		}
 	}
 
@@ -1171,12 +1171,38 @@
 	/* Resume page */
 
 	/* Card */
+	// Variables
+	$accent-red: #E27689;
 
-	.card-container {
+	// Mixin
+	@mixin card-container(){
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: space-between;
+	}
+
+	@mixin card() {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		align-items: center;
+		width: 100%;
+		padding: 20px;
+		margin-bottom: 40px;
+		background-color: #FDFDFD;
+		@include box-shadow();
+	}
+
+	@mixin box-shadow(){
+		border-left: 5px solid $accent-red;
+		box-shadow: 5px 5px 13px -1px rgba(0,0,0,0.39);
+		-webkit-box-shadow: 5px 5px 13px -1px rgba(0,0,0,0.39);
+		-moz-box-shadow: 5px 5px 13px -1px rgba(0,0,0,0.39);
+	}
+
+	.card-container {
+		@include card-container();
 
 		.card {
 			display: flex;
@@ -1186,10 +1212,8 @@
 			width: 100%;
 			padding: 20px;
 			margin-bottom: 40px;
-			border-left: 5px solid #E27689;
-			box-shadow: 5px 5px 13px -1px rgba(0,0,0,0.39);
-			-webkit-box-shadow: 5px 5px 13px -1px rgba(0,0,0,0.39);
-			-moz-box-shadow: 5px 5px 13px -1px rgba(0,0,0,0.39);
+			background-color: #FDFDFD;
+			@include box-shadow();
 
 			h2 {
 				font-size: 2rem;
@@ -1209,7 +1233,7 @@
 
 
 				span {
-					color: #E27689;
+					color: $accent-red;
 				}
 			}//small
 
@@ -1236,10 +1260,7 @@
 		background-color: #FDFDFD;
 		margin: 0 auto;
 		padding: 40px;
-		border-left: 5px solid #E27689;
-		box-shadow: 5px 5px 13px -1px rgba(0,0,0,0.39);
-		-webkit-box-shadow: 5px 5px 13px -1px rgba(0,0,0,0.39);
-		-moz-box-shadow: 5px 5px 13px -1px rgba(0,0,0,0.39);
+		@include box-shadow();
 
 		p {
 			align-content: center;
@@ -1247,6 +1268,63 @@
 			strong {
 				font-size: 2rem;
 				font-weight: bolder;
+			}
+		}
+
+		.summary-button {
+			border: 1px solid $accent-red;
+			border-radius: 0.35em;
+			color: $accent-red;
+			text-decoration: none;
+			padding: 0.3em 1.5em;
+			cursor: pointer;
+			-moz-transition: background-color 0.35s linear !important;
+			-webkit-transition: background-color 0.35s linear !important;
+			-ms-transition: background-color 0.35s linear !important;
+			transition: background-color 0.35s linear !important;
+		}
+
+		.summary-button:hover {
+			color: white;
+			border: 1px solid $accent-red;
+			border-radius: 0.35em;
+			background-color: $accent-red;
+		}
+	}
+
+	.form-card {
+		@include card();
+		padding: 60px 0;
+
+		input {
+			font-size: 1rem;
+		}
+
+		textarea {
+			font-size: 1rem;
+		}
+
+		.col-12 {
+			input {
+				border: 1px solid $accent-red;
+				border-radius: 0.35em;
+				color: $accent-red !important;
+				text-decoration: none;
+				padding: 0.3em 1.5em;
+				cursor: pointer;
+				background-color: #FDFDFD !important;
+				background-image: none !important;
+				-moz-transition: background-color 0.35s linear !important;
+				-webkit-transition: background-color 0.35s linear !important;
+				-ms-transition: background-color 0.35s linear !important;
+				transition: background-color 0.35s linear !important;
+			}
+
+			input:hover {
+				color: white !important;
+				border: 1px solid $accent-red;
+				border-radius: 0.35em;
+				background-color: $accent-red !important;
 			}
 		}
 	}
