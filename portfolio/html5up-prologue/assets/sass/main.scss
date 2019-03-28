@@ -311,13 +311,13 @@
 		}
 
 		&.avatar48 {
-			width: 48px;
-			height: 48px;
+			width: 100px;
+			height: 100px;
 			background: #f00;
 
 			img {
-				width: 48px;
-				height: 48px;
+				width: 100px;
+				height: 100px;
 			}
 		}
 
@@ -497,7 +497,7 @@
 	.header-button {
 		position: relative;
 		display: inline-block;
-		border: 2px solid white;
+		border: 1px solid #0000 !important;
 		border-radius: 0.35em;
 		color: #fff !important;
 		text-decoration: none;
@@ -511,8 +511,8 @@
 	}
 
 	.header-button:hover {
-		color: #ffffff7d !important;
-		border: 2px solid #0000 !important;
+		color: #E276897d !important;
+		border: 1px solid #0000 !important;
 		border-radius: 0.35em;
 		background-color: #00000055 !important;
 	}
@@ -653,8 +653,8 @@
 
 		.image {
 			position: absolute;
-			left: 0;
-			top: 0;
+			left: -20px;
+			top: -28px;
 		}
 	}
 
